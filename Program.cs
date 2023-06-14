@@ -13,25 +13,23 @@
                     num[j] = temp;
             }
         }
-        return temp++;
+        for (int i = 1; i < num.Length; i++)
+        {
+            return num[i];
+        }
+        return num.Length;
     }
 
     static int searchArray(int[] num, int schNum)
     {
-        int v = 0;
         for (int i = 1; i < num.Length; i++)
         {
             if (schNum == num[i])
             {
-                v = num[i];
-            }
-
-            else
-            {
-                v = -1;
+                return i;
             }
         }
-        return v;
+        return -1;
     }
 
     private static void Main(string[] args)
