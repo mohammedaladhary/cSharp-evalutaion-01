@@ -1,6 +1,6 @@
 ﻿internal class Program
 {
-    static int sortArray(int[] num)
+    static int[] sortArray(int[] num)
     {
         int temp = 0;
         for (int i = 1; i < num.Length; i++)
@@ -13,11 +13,7 @@
                     num[j] = temp;
             }
         }
-        for (int i = 1; i < num.Length; i++)
-        {
-            return num[i];
-        }
-        return num.Length;
+        return num;
     }
 
     static int searchArray(int[] num, int schNum)
